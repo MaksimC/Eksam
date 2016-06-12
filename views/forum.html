@@ -3,32 +3,29 @@
     <?php while($row = mysqli_fetch_assoc($result)){ ?>
 
     <br>
-    <div class="container"  >
+    <div class="container" >
 
         <blockquote id="blockquote">
-        <i>user</i> <?php echo($row["user"]); ?> <i>wrote</i>:
-            <?php echo($row["forumpost"]);  ?>
+            <i>user</i> <?php echo($row["user"]); ?> <i>wrote</i>:<br />
+            <?php echo($row["forumpost"]); ?>
         </blockquote>
-
     </div>
     <form action="?page=delete" method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-        <input class="btn btn-link" value="Delete Message" type="submit" name="delete_bin" data-toggle="tooltip">
+        <input class="btn btn-link" value="Delete Message" type="submit" name="delete_bin" data-toggle="tooltip" title="Delete message">
     </form>
-
     <?php }; ?>
 
 </div>
-
 
 <br>
 
 <form id="post_msg_form" action="?page=post_msg" method="POST" >
     <div class="form-group">
         <label for="forumpost">Comment:</label>
-        <textarea class="form-control" name="forumpost" id="forumpost" cols="20" rows="4" data-toggle="type your comment here" ></textarea>
+        <textarea class="form-control" name="forumpost" id="forumpost" cols="20" rows="4" data-toggle="tooltip" title="Write you comment here" ></textarea>
         <br>
-        <input type="submit" class="btn btn-primary" value="Post comment">
+        <input type="submit" class="btn btn-primary" value="Post comment" data-toggle="tooltip" title="Send comment">
     </div>
 
 </form>
