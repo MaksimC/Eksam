@@ -1,0 +1,50 @@
+<div id="login">
+    <p id="login_form_open">
+        <button class="btn btn-warning btn-lg" type="button">Login here</button>
+    </p>
+
+    <form id="login_form" action="?page=login" method="POST" >
+
+        <p id="login_form_close">
+            <button class="btn btn-warning btn-lg" type="button">Close Login</button>
+        </p>
+
+        <input class="form-control" type="text" name="user" id="user" placeholder="username"/><br/>
+        <input class="form-control" type="password" name="pass" id="password" placeholder="password"/><br/>
+        <input class="btn btn-primary" type="submit" id="submit_login" value="Log me in now"/>
+
+    </form>
+
+    <br><br>
+
+    <!--REGISTER-->
+
+    <p id="register_form_open">
+        <button class="btn btn-info btn-lg" type="button">Register here</button>
+    </p>
+
+    <form id="register_form" action="?page=register" method="POST" >
+
+        <p id="register_form_close">
+            <button class="btn btn-info btn-lg" type="button">Close Register</button>
+        </p>
+
+        <input class="form-control" type="text" name="user" id="user_register" placeholder="username"/><br/>
+        <input class="form-control" type="password" name="pass" id="password_register" placeholder="password"/><br/>
+
+        <br>
+
+        <input class="btn btn-primary" type="submit" id="submit_registration" value="Register me now"/>
+
+    </form>
+
+    <br>
+    <?php if (isset($errors)):?>
+    <?php foreach($errors as $error):?>
+    <div class="text-danger"><?php echo htmlspecialchars($error); ?></div>
+    <?php endforeach;?>
+    <?php endif;?>
+
+</div>
+<script  src="javascript.js"></script>
+

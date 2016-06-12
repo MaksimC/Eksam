@@ -1,0 +1,38 @@
+#login_form {
+    display: none;
+}
+#register_form {
+    display: none;
+}
+
+#wrap{
+    width: 1000px;
+    background: white;
+    margin: auto;
+    overflow: auto;
+    min-height:600px;
+}
+
+#start {
+
+    display: inline-block;
+    width: 100%;
+    padding:235px 0px;
+    text-align: center;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow:0px 0px 10px black;
+}
+
+#blockquote{
+    width: 600px;
+}
+
+
+#forumpost{
+    width: 500px;
+}
+
+
